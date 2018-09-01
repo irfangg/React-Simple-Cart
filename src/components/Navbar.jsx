@@ -1,8 +1,13 @@
 import React, { Component } from "react";
-
+import Time from "./Time";
 class Navbar extends Component {
   render() {
-    return <h1>Cart : {this.props.totalCartValue}</h1>;
+    return (
+      <div style={{ display: "inline-flex" }}>
+        <h2 style={{ marginRight: 100 }}>Cart : {this.props.totalCartValue}</h2>
+        <Time />
+      </div>
+    );
   }
 }
 
