@@ -9,6 +9,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
+        <span style={{ marginRight: 10 }}>{this.props.counter.item} :</span>
         <span style={this.margin}>{this.props.counter.value}</span>
         <button style={this.margin} onClick={this.props.handleIncrement}>
           +

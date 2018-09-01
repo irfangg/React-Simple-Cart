@@ -4,14 +4,12 @@ import Counters from "./Counters";
 class App extends Component {
   state = {
     counters: [
-      { id: 1, value: 1 },
-      { id: 2, value: 0 },
-      { id: 3, value: 2 },
-      { id: 4, value: 0 },
-      { id: 5, value: 3 },
-      { id: 6, value: 3 },
-      { id: 7, value: 3 },
-      { id: 8, value: 3 }
+      { id: 1, value: 1, item: "Apple" },
+      { id: 2, value: 0, item: "Banana" },
+      { id: 3, value: 2, item: "Carrot" },
+      { id: 4, value: 0, item: "Grapes" },
+      { id: 5, value: 3, item: "Mango" },
+      { id: 6, value: 3, item: "Chikoo" }
     ]
   };
   handleIncrement = index => {
@@ -41,6 +39,7 @@ class App extends Component {
           totalCartValue={this.state.counters.filter(c => c.value > 0).length}
         />
         <div className="App">
+          <h3>Add items to cart</h3>
           <Counters
             counters={this.state.counters}
             handleIncrement={this.handleIncrement}
